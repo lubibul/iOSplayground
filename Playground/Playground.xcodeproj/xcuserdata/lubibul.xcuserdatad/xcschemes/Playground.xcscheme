@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "733199E718BA711B00F06B62"
+               BlueprintIdentifier = "736B30F318BA8A6E000D9763"
                BuildableName = "Playground.app"
                BlueprintName = "Playground"
                ReferencedContainer = "container:Playground.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "73319A0B18BA711B00F06B62"
+               BlueprintIdentifier = "736B311418BA8A6E000D9763"
                BuildableName = "PlaygroundTests.xctest"
                BlueprintName = "PlaygroundTests"
                ReferencedContainer = "container:Playground.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "733199E718BA711B00F06B62"
+            BlueprintIdentifier = "736B30F318BA8A6E000D9763"
             BuildableName = "Playground.app"
             BlueprintName = "Playground"
             ReferencedContainer = "container:Playground.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "733199E718BA711B00F06B62"
+            BlueprintIdentifier = "736B30F318BA8A6E000D9763"
             BuildableName = "Playground.app"
             BlueprintName = "Playground"
             ReferencedContainer = "container:Playground.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "733199E718BA711B00F06B62"
+            BlueprintIdentifier = "736B30F318BA8A6E000D9763"
             BuildableName = "Playground.app"
             BlueprintName = "Playground"
             ReferencedContainer = "container:Playground.xcodeproj">

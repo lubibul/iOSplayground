@@ -1,5 +1,5 @@
 //
-//  PlaygroundMasterViewController.h
+//  PlaygroundViewController.h
 //  Playground
 //
 //  Created by Lulu Tang on 2/23/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlaygroundMasterViewController : UITableViewController
+@interface PlaygroundViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
