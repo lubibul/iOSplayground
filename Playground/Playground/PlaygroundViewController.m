@@ -8,6 +8,7 @@
 
 #import "PlaygroundViewController.h"
 #import "TableCell.h"
+#import <Parse/Parse.h>
 
 @interface PlaygroundViewController ()
 
@@ -30,7 +31,16 @@
     thumbnails = [NSArray arrayWithObjects:@"egg_benedict.jpg", @"mushroom_risotto.jpg", @"full_breakfast.jpg", @"hamburger.jpg", @"ham_and_egg_sandwich.jpg", @"creme_brelee.jpg", @"white_chocolate_donut.jpg", @"starbucks_coffee.jpg", @"vegetable_curry.jpg", @"instant_noodle_with_egg.jpg", @"noodle_with_bbq_pork.jpg", @"japanese_noodle_with_pork.jpg", @"green_tea.jpg", @"thai_shrimp_cake.jpg", @"angry_birds_cake.jpg", @"ham_and_cheese_panini.jpg", nil];
     
     // Initialize prep times
-    prepTime = [NSArray arrayWithObjects:@"30 min", @"30 min", @"1 hour", @"10 min", @"10 min", @"1 hour", @"1 hour", @"5 min", @"30 min", @"10 min", @"1 hour", @"30 min", @"15 min", @"2 hours", @"3 hours", @"30 min", nil];}
+    prepTime = [NSArray arrayWithObjects:@"30 min", @"30 min", @"1 hour", @"10 min", @"10 min", @"1 hour", @"1 hour", @"5 min", @"30 min", @"10 min", @"1 hour", @"30 min", @"15 min", @"2 hours", @"3 hours", @"30 min", nil];
+    
+    for (int i=0; i<[recipes count]; i++) {
+        PFObject *recipe = [PFObject objectWithClassName:@"recipe"];
+        recipe[@"name"] = [recipes objectAtIndex:i];
+        recipe[@"thumbnail"] = [thumbnails objectAtIndex:i];
+        recipe[@"prepTime"] = [prepTime objectAtIndex:i];
+        [recipe saveInBackground];
+    }
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
