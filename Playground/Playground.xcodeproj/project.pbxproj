@@ -47,6 +47,8 @@
 		736B315E18BA8EA9000D9763 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736B315D18BA8EA9000D9763 /* Security.framework */; };
 		736B316018BA8EAC000D9763 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736B315F18BA8EAC000D9763 /* StoreKit.framework */; };
 		736B316218BA8EB1000D9763 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736B316118BA8EB1000D9763 /* SystemConfiguration.framework */; };
+		736B316418BA8F49000D9763 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736B316318BA8F49000D9763 /* TableCell.xib */; };
+		736B316718BA90D7000D9763 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 736B316618BA90D7000D9763 /* TableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,9 @@
 		736B315D18BA8EA9000D9763 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		736B315F18BA8EAC000D9763 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		736B316118BA8EB1000D9763 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		736B316318BA8F49000D9763 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		736B316518BA90D7000D9763 /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
+		736B316618BA90D7000D9763 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +192,9 @@
 				736B310618BA8A6E000D9763 /* PlaygroundAppDelegate.h */,
 				736B310718BA8A6E000D9763 /* PlaygroundAppDelegate.m */,
 				736B310918BA8A6E000D9763 /* Main.storyboard */,
+				736B316318BA8F49000D9763 /* TableCell.xib */,
+				736B316518BA90D7000D9763 /* TableCell.h */,
+				736B316618BA90D7000D9763 /* TableCell.m */,
 				736B310C18BA8A6E000D9763 /* PlaygroundViewController.h */,
 				736B310D18BA8A6E000D9763 /* PlaygroundViewController.m */,
 				736B310F18BA8A6E000D9763 /* Images.xcassets */,
@@ -339,6 +347,7 @@
 				736B310B18BA8A6E000D9763 /* Main.storyboard in Resources */,
 				736B314418BA8CE7000D9763 /* ham_and_cheese_panini.jpg in Resources */,
 				736B314318BA8CE7000D9763 /* green_tea.jpg in Resources */,
+				736B316418BA8F49000D9763 /* TableCell.xib in Resources */,
 				736B314918BA8CE7000D9763 /* mushroom_risotto.jpg in Resources */,
 				736B314B18BA8CE7000D9763 /* starbucks_coffee.jpg in Resources */,
 				736B314118BA8CE7000D9763 /* egg_benedict.jpg in Resources */,
@@ -364,6 +373,7 @@
 			files = (
 				736B310418BA8A6E000D9763 /* main.m in Sources */,
 				736B310818BA8A6E000D9763 /* PlaygroundAppDelegate.m in Sources */,
+				736B316718BA90D7000D9763 /* TableCell.m in Sources */,
 				736B310E18BA8A6E000D9763 /* PlaygroundViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,11 +503,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/lubibul/GitHub/iOSplayground/Playground,
+					"$(SRCROOT)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Playground/Playground-Prefix.pch";
 				INFOPLIST_FILE = "Playground/Playground-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -510,11 +521,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/lubibul/GitHub/iOSplayground/Playground,
+					"$(SRCROOT)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Playground/Playground-Prefix.pch";
 				INFOPLIST_FILE = "Playground/Playground-Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -581,6 +593,7 @@
 				736B312818BA8A6E000D9763 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		736B312918BA8A6E000D9763 /* Build configuration list for PBXNativeTarget "PlaygroundTests" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +602,7 @@
 				736B312B18BA8A6E000D9763 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
