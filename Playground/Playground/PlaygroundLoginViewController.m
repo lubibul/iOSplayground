@@ -10,7 +10,6 @@
 #import "PlaygroundTableViewController.h"
 
 @interface PlaygroundLoginViewController ()
-@property (strong, nonatomic) IBOutlet UIButton *recipesButton;
 @end
 
 @implementation PlaygroundLoginViewController
@@ -35,9 +34,11 @@
     }
 }
 
-- (IBAction)clickRecipesButton:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"showRecipesList"
-                         sender:self];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"torRecipesList"]) {
+        PFQuery *query = [PFQuery queryWithClassName:@"recipe"];
+        [query findObjectsInBackgroundWithTarget:self selector:@selector(findCallback:error:)];
+    }
 }
 
 // Sent to the delegate to determine whether the log in request should be submitted to the server.

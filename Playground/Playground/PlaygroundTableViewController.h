@@ -9,4 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PlaygroundTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+- (void)findCallback:(NSArray *)objects error:(NSError *)error;
 @end
