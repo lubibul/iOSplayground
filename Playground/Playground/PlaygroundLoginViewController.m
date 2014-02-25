@@ -10,6 +10,7 @@
 #import "PlaygroundTableViewController.h"
 
 @interface PlaygroundLoginViewController ()
+@property (strong, nonatomic) IBOutlet UIButton *logoutButton;
 @end
 
 @implementation PlaygroundLoginViewController
@@ -17,6 +18,10 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    [self createLoginViewController];
+}
+
+- (void)createLoginViewController {
     if (![PFUser currentUser]) { // No user logged in
         // Create the log in view controller
         PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
@@ -32,6 +37,11 @@
         //Present the log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
     }
+}
+
+- (IBAction)clickLogoutButton:(UIButton *)sender {
+    [PFUser logOut];
+    [self createLoginViewController];
 }
 
 // Sent to the delegate to determine whether the log in request should be submitted to the server.
