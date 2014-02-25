@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 Lulu Tang. All rights reserved.
 //
 
-#import "PlaygroundViewController.h"
+#import "PlaygroundTableViewController.h"
 #import "TableCell.h"
 #import <Parse/Parse.h>
 
-@interface PlaygroundViewController ()
+@interface PlaygroundTableViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic)NSMutableArray *recipes;
 @end
 
-@implementation PlaygroundViewController
+@implementation PlaygroundTableViewController
 
 - (void)viewDidLoad
 {
@@ -52,7 +52,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"SimpleTableCell";
+    static NSString *simpleTableIdentifier = @"TableCell";
     
     TableCell *cell = (TableCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     

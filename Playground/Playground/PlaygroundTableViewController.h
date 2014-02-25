@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlaygroundViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface PlaygroundTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @end
