@@ -28,7 +28,16 @@
     
     // Asynchronously grab the data from Parse
     PFQuery *query = [PFQuery queryWithClassName:@"recipe"];
+    [query whereKey:@"author" equalTo:[PFUser currentUser]];
     [query findObjectsInBackgroundWithTarget:self selector:@selector(findCallback:error:)];
+    
+    PFUser *user = [PFUser currentUser];
+    self.title = [NSString stringWithFormat:@"%@'s Recipes", user[@"username"]];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    // TODO check to see if any new recipes were added
+    // add those to the recipes array
 }
 
 - (void)findCallback:(NSArray *)objects error:(NSError *)error {
@@ -62,10 +71,13 @@
     }
     
     PFObject *recipe = [self.recipes objectAtIndex:indexPath.row];
-    PFUser *user = [PFUser currentUser];
     
-    cell.nameLabel.text = [NSString stringWithFormat:@"%@'s %@", user[@"username"], recipe[@"name"]];
-    cell.thumbnailImageView.image = [UIImage imageNamed:recipe[@"thumbnail"]];
+    cell.nameLabel.text = recipe[@"name"];
+    if (recipe[@"thumbnail"] == nil) {
+        cell.thumbnailImageView.image = [UIImage imageNamed:@"default.png"];
+    } else {
+        cell.thumbnailImageView.image = [UIImage imageNamed:recipe[@"thumbnail"]];
+    }
     cell.prepTimeLabel.text = recipe[@"prepTime"];
     return cell;
 }

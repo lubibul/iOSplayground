@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		731FDB4D18BC69A9005286EE /* PlaygroundLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731FDB4C18BC69A9005286EE /* PlaygroundLoginViewController.m */; };
+		731FDB5018BC7AF3005286EE /* PlaygroundAddRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731FDB4F18BC7AF3005286EE /* PlaygroundAddRecipeViewController.m */; };
+		731FDB5218BC8985005286EE /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 731FDB5118BC8985005286EE /* default.png */; };
 		736B30F818BA8A6E000D9763 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736B30F718BA8A6E000D9763 /* Foundation.framework */; };
 		736B30FA18BA8A6E000D9763 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736B30F918BA8A6E000D9763 /* CoreGraphics.framework */; };
 		736B30FC18BA8A6E000D9763 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736B30FB18BA8A6E000D9763 /* UIKit.framework */; };
@@ -65,6 +67,9 @@
 /* Begin PBXFileReference section */
 		731FDB4B18BC69A9005286EE /* PlaygroundLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundLoginViewController.h; sourceTree = "<group>"; };
 		731FDB4C18BC69A9005286EE /* PlaygroundLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundLoginViewController.m; sourceTree = "<group>"; };
+		731FDB4E18BC7AF3005286EE /* PlaygroundAddRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundAddRecipeViewController.h; sourceTree = "<group>"; };
+		731FDB4F18BC7AF3005286EE /* PlaygroundAddRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundAddRecipeViewController.m; sourceTree = "<group>"; };
+		731FDB5118BC8985005286EE /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 		736B30F418BA8A6E000D9763 /* Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		736B30F718BA8A6E000D9763 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		736B30F918BA8A6E000D9763 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -197,6 +202,8 @@
 				736B310918BA8A6E000D9763 /* Main.storyboard */,
 				731FDB4B18BC69A9005286EE /* PlaygroundLoginViewController.h */,
 				731FDB4C18BC69A9005286EE /* PlaygroundLoginViewController.m */,
+				731FDB4E18BC7AF3005286EE /* PlaygroundAddRecipeViewController.h */,
+				731FDB4F18BC7AF3005286EE /* PlaygroundAddRecipeViewController.m */,
 				736B316318BA8F49000D9763 /* TableCell.xib */,
 				736B316518BA90D7000D9763 /* TableCell.h */,
 				736B316618BA90D7000D9763 /* TableCell.m */,
@@ -241,6 +248,7 @@
 		736B312E18BA8CD5000D9763 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				731FDB5118BC8985005286EE /* default.png */,
 				736B312F18BA8CE7000D9763 /* angry_birds_cake.jpg */,
 				736B313018BA8CE7000D9763 /* creme_brelee.jpg */,
 				736B313118BA8CE7000D9763 /* egg_benedict.jpg */,
@@ -340,6 +348,7 @@
 			files = (
 				736B314218BA8CE7000D9763 /* full_breakfast.jpg in Resources */,
 				736B311018BA8A6E000D9763 /* Images.xcassets in Resources */,
+				731FDB5218BC8985005286EE /* default.png in Resources */,
 				736B314018BA8CE7000D9763 /* creme_brelee.jpg in Resources */,
 				736B314D18BA8CE7000D9763 /* vegetable_curry.jpg in Resources */,
 				736B314C18BA8CE7000D9763 /* thai_shrimp_cake.jpg in Resources */,
@@ -377,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				736B310418BA8A6E000D9763 /* main.m in Sources */,
+				731FDB5018BC7AF3005286EE /* PlaygroundAddRecipeViewController.m in Sources */,
 				731FDB4D18BC69A9005286EE /* PlaygroundLoginViewController.m in Sources */,
 				736B310818BA8A6E000D9763 /* PlaygroundAppDelegate.m in Sources */,
 				736B316718BA90D7000D9763 /* TableCell.m in Sources */,

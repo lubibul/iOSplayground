@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Playground Table View Controller - My Recipes-->
+        <!--Playground Table View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="PlaygroundTableViewController" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="My Recipes" id="FsV-AV-H52">
+                    <navigationItem key="navigationItem" id="FsV-AV-H52">
                         <barButtonItem key="rightBarButtonItem" title="+" id="ii5-8i-RhB">
                             <connections>
                                 <segue destination="897-gj-E8h" kind="push" id="beV-Bf-eKy"/>
@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="1237" y="52"/>
         </scene>
-        <!--View Controller - New Recipe-->
+        <!--Playground Add Recipe View Controller - New Recipe-->
         <scene sceneID="ZyN-xy-3ou">
             <objects>
-                <viewController id="897-gj-E8h" sceneMemberID="viewController">
+                <viewController id="897-gj-E8h" customClass="PlaygroundAddRecipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wkl-zW-wMc"/>
                         <viewControllerLayoutGuide type="bottom" id="b0y-Jz-HxU"/>
@@ -79,10 +79,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJv-mn-ik5">
+                                <rect key="frame" x="20" y="202" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="MAKE MY RECIPE">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressMakeRecipeButton:" destination="897-gj-E8h" eventType="touchUpInside" id="O0n-le-jAU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Recipe" id="q2z-WZ-anG"/>
+                    <connections>
+                        <outlet property="makeRecipeButton" destination="jJv-mn-ik5" id="SiY-a9-Ond"/>
+                        <outlet property="prepTimeTextField" destination="iFJ-gt-h9y" id="3pG-mb-xHZ"/>
+                        <outlet property="titleTextField" destination="eoK-es-1G3" id="Zqb-No-JgL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5b-w5-7Mb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
