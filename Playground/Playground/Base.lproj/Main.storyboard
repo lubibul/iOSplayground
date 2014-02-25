@@ -28,6 +28,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FsV-AV-H52"/>
                     <connections>
                         <outlet property="tableView" destination="dMb-SP-wRI" id="83b-yw-TaJ"/>
                     </connections>
@@ -47,8 +48,25 @@
                     <view key="view" contentMode="scaleToFill" id="roR-Oc-rlC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORT-jg-ZtQ">
+                                <rect key="frame" x="88" y="117" width="144" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <state key="normal" title="Recipes">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickRecipesButton:" destination="0Kt-Rn-WmY" eventType="touchUpInside" id="bDS-vj-WGw"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" identifier="showRecipesList" id="fkh-sa-hy2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="recipesButton" destination="ORT-jg-ZtQ" id="XMH-GV-2Zy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8R-AE-nbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

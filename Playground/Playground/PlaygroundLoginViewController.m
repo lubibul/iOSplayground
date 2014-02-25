@@ -7,9 +7,10 @@
 //
 
 #import "PlaygroundLoginViewController.h"
+#import "PlaygroundTableViewController.h"
 
 @interface PlaygroundLoginViewController ()
-
+@property (strong, nonatomic) IBOutlet UIButton *recipesButton;
 @end
 
 @implementation PlaygroundLoginViewController
@@ -32,6 +33,11 @@
         //Present the log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
     }
+}
+
+- (IBAction)clickRecipesButton:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"showRecipesList"
+                         sender:self];
 }
 
 // Sent to the delegate to determine whether the log in request should be submitted to the server.
