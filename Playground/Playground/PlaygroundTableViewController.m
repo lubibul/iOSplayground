@@ -62,8 +62,9 @@
     }
     
     PFObject *recipe = [self.recipes objectAtIndex:indexPath.row];
-
-    cell.nameLabel.text = recipe[@"name"];
+    PFUser *user = [PFUser currentUser];
+    
+    cell.nameLabel.text = [NSString stringWithFormat:@"%@'s %@", user[@"username"], recipe[@"name"]];
     cell.thumbnailImageView.image = [UIImage imageNamed:recipe[@"thumbnail"]];
     cell.prepTimeLabel.text = recipe[@"prepTime"];
     return cell;
