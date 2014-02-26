@@ -9,6 +9,7 @@
 #import "PlaygroundTableViewController.h"
 #import "TableCell.h"
 #import <Parse/Parse.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface PlaygroundTableViewController ()
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -26,24 +27,22 @@
     // load up recipes array with cached data
     // ...
     
-    // Asynchronously grab the data from Parse
-    PFQuery *query = [PFQuery queryWithClassName:@"recipe"];
-    [query whereKey:@"author" equalTo:[PFUser currentUser]];
-    [query findObjectsInBackgroundWithTarget:self selector:@selector(findCallback:error:)];
-    
     PFUser *user = [PFUser currentUser];
     self.title = [NSString stringWithFormat:@"%@'s Recipes", user[@"username"]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    // TODO check to see if any new recipes were added
-    // add those to the recipes array
+    // Asynchronously grab the data from Parse
+    PFQuery *query = [PFQuery queryWithClassName:@"recipe"];
+    [query whereKey:@"author" equalTo:[PFUser currentUser]];
+    [query findObjectsInBackgroundWithTarget:self selector:@selector(findCallback:error:)];
 }
 
 - (void)findCallback:(NSArray *)objects error:(NSError *)error {
     if (!error) {
         // The find succeeded.
         NSLog(@"Successfully retrieved %d recipes.", objects.count);
+        [self.recipes removeAllObjects];
         for (PFObject *object in objects) {
             [self.recipes addObject:object];
         }
