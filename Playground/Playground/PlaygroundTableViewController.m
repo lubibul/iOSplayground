@@ -78,6 +78,16 @@
         cell.thumbnailImageView.image = [UIImage imageNamed:recipe[@"thumbnail"]];
     }
     cell.prepTimeLabel.text = recipe[@"prepTime"];
+    
+    // Make picture into a circle
+    CGRect thumbnailframe = CGRectMake(5, 5, 69, 69);
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+    CGPathRef maskPath = CGPathCreateWithEllipseInRect(thumbnailframe, NULL);
+    maskLayer.bounds = thumbnailframe;
+    [maskLayer setPath:maskPath];
+    maskLayer.position = CGPointMake(thumbnailframe.size.width/2, thumbnailframe.size.height/2);
+    [cell.thumbnailImageView.layer setMask:maskLayer];
+    
     return cell;
 }
 
