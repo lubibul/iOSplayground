@@ -41,7 +41,7 @@
 - (void)findCallback:(NSArray *)objects error:(NSError *)error {
     if (!error) {
         // The find succeeded.
-        NSLog(@"Successfully retrieved %d recipes.", objects.count);
+        NSLog(@"Successfully retrieved %d recipes.", (int)objects.count);
         [self.recipes removeAllObjects];
         for (PFObject *object in objects) {
             [self.recipes addObject:object];
