@@ -52,6 +52,7 @@
 		736B316218BA8EB1000D9763 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736B316118BA8EB1000D9763 /* SystemConfiguration.framework */; };
 		736B316418BA8F49000D9763 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736B316318BA8F49000D9763 /* TableCell.xib */; };
 		736B316718BA90D7000D9763 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 736B316618BA90D7000D9763 /* TableCell.m */; };
+		73F6CF4418E3791E000CB2A3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F6CF4318E3791E000CB2A3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		736B316318BA8F49000D9763 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		736B316518BA90D7000D9763 /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
 		736B316618BA90D7000D9763 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
+		73F6CF4318E3791E000CB2A3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73F6CF4418E3791E000CB2A3 /* MapKit.framework in Frameworks */,
 				736B316218BA8EB1000D9763 /* SystemConfiguration.framework in Frameworks */,
 				736B316018BA8EAC000D9763 /* StoreKit.framework in Frameworks */,
 				736B315E18BA8EA9000D9763 /* Security.framework in Frameworks */,
@@ -176,6 +179,7 @@
 		736B30F618BA8A6E000D9763 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73F6CF4318E3791E000CB2A3 /* MapKit.framework */,
 				736B316118BA8EB1000D9763 /* SystemConfiguration.framework */,
 				736B315F18BA8EAC000D9763 /* StoreKit.framework */,
 				736B315D18BA8EA9000D9763 /* Security.framework */,

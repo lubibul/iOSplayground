@@ -15,6 +15,32 @@
 
 @implementation PlaygroundLoginViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    self.locationManager.delegate = self;
+    [self.locationManager startUpdatingLocation];
+    
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder geocodeAddressString:@"1200 Park Ave, Emeryville, CA 94608" completionHandler:^(NSArray *placemarks, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            CLPlacemark *placemark = [placemarks lastObject];
+            float spanX = 0.00725;
+            float spanY = 0.00725;
+            MKCoordinateRegion region;
+            region.center.latitude = placemark.location.coordinate.latitude;
+            region.center.longitude = placemark.location.coordinate.longitude;
+            region.span = MKCoordinateSpanMake(spanX, spanY);
+            [self.mapView setRegion:region animated:YES];
+        }
+    }];
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
