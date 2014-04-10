@@ -37,8 +37,14 @@
             region.center.longitude = placemark.location.coordinate.longitude;
             region.span = MKCoordinateSpanMake(spanX, spanY);
             [self.mapView setRegion:region animated:YES];
+            
+            MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+            [annotation setCoordinate:region.center];
+            [annotation setTitle:@"Pixar"]; //You can set the subtitle too
+            [self.mapView addAnnotation:annotation];
         }
     }];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
