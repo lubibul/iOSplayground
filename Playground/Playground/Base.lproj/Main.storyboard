@@ -31,7 +31,7 @@
                     <navigationItem key="navigationItem" id="FsV-AV-H52">
                         <barButtonItem key="rightBarButtonItem" title="+" id="ii5-8i-RhB">
                             <connections>
-                                <segue destination="897-gj-E8h" kind="push" id="beV-Bf-eKy"/>
+                                <segue destination="897-gj-E8h" kind="custom" identifier="addRecipe" customClass="JHCustomSegue" id="beV-Bf-eKy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -42,6 +42,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1237" y="52"/>
+        </scene>
+        <!--Playground Detail View Controller-->
+        <scene sceneID="rzI-46-5rs">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hor-X5-sza" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="iTa-Ow-wgi" customClass="PlaygroundDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j1j-Fi-HiK"/>
+                        <viewControllerLayoutGuide type="bottom" id="SXU-C2-w5S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gEk-MA-Hhc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="4vX-vN-V9T">
+                                <rect key="frame" x="20" y="273" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77522843370000005" green="1" blue="0.47883060449999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="detailDescriptionLabel" destination="4vX-vN-V9T" id="dG7-45-TpJ"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1736" y="52"/>
         </scene>
         <!--Playground Add Recipe View Controller - New Recipe-->
         <scene sceneID="ZyN-xy-3ou">

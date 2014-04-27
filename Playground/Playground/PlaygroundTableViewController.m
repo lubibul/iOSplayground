@@ -7,6 +7,7 @@
 //
 
 #import "PlaygroundTableViewController.h"
+#import "PlaygroundDetailViewController.h"
 #import "TableCell.h"
 #import <Parse/Parse.h>
 #import <QuartzCore/QuartzCore.h>
@@ -94,6 +95,15 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 78;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSString *recipeName = self.recipes[indexPath.row];
+        [[segue destinationViewController] setDetailItem:recipeName];
+    }
 }
 
 @end
