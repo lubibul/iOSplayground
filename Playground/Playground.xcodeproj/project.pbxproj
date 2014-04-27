@@ -52,6 +52,7 @@
 		736B316218BA8EB1000D9763 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 736B316118BA8EB1000D9763 /* SystemConfiguration.framework */; };
 		736B316418BA8F49000D9763 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736B316318BA8F49000D9763 /* TableCell.xib */; };
 		736B316718BA90D7000D9763 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 736B316618BA90D7000D9763 /* TableCell.m */; };
+		73E15194190D509A00E6293A /* JHCustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E15193190D509A00E6293A /* JHCustomSegue.m */; };
 		73F6CF4418E3791E000CB2A3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F6CF4318E3791E000CB2A3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +120,8 @@
 		736B316318BA8F49000D9763 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		736B316518BA90D7000D9763 /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
 		736B316618BA90D7000D9763 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
+		73E15192190D509A00E6293A /* JHCustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHCustomSegue.h; sourceTree = "<group>"; };
+		73E15193190D509A00E6293A /* JHCustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHCustomSegue.m; sourceTree = "<group>"; };
 		73F6CF4318E3791E000CB2A3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -204,6 +207,8 @@
 				736B310618BA8A6E000D9763 /* PlaygroundAppDelegate.h */,
 				736B310718BA8A6E000D9763 /* PlaygroundAppDelegate.m */,
 				736B310918BA8A6E000D9763 /* Main.storyboard */,
+				73E15192190D509A00E6293A /* JHCustomSegue.h */,
+				73E15193190D509A00E6293A /* JHCustomSegue.m */,
 				731FDB4B18BC69A9005286EE /* PlaygroundLoginViewController.h */,
 				731FDB4C18BC69A9005286EE /* PlaygroundLoginViewController.m */,
 				731FDB4E18BC7AF3005286EE /* PlaygroundAddRecipeViewController.h */,
@@ -390,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				736B310418BA8A6E000D9763 /* main.m in Sources */,
+				73E15194190D509A00E6293A /* JHCustomSegue.m in Sources */,
 				731FDB5018BC7AF3005286EE /* PlaygroundAddRecipeViewController.m in Sources */,
 				731FDB4D18BC69A9005286EE /* PlaygroundLoginViewController.m in Sources */,
 				736B310818BA8A6E000D9763 /* PlaygroundAppDelegate.m in Sources */,

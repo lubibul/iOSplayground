@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kjw-oz-3aM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kjw-oz-3aM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -119,6 +119,24 @@
             </objects>
             <point key="canvasLocation" x="349" y="52"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Ves-ff-73P">
+            <objects>
+                <viewController id="x0M-FV-w1N" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="72Y-vF-45g"/>
+                        <viewControllerLayoutGuide type="bottom" id="ydc-s9-6vj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vCr-sV-M7B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWZ-Tq-N4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="-696"/>
+        </scene>
         <!--Playground Login View Controller-->
         <scene sceneID="Ewa-H2-in6">
             <objects>
@@ -141,8 +159,18 @@
                                     <action selector="clickLogoutButton:" destination="0Kt-Rn-WmY" eventType="touchUpInside" id="xFL-OJ-xtg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Yg-o9-ZRa">
+                                <rect key="frame" x="119" y="488" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Alert Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="x0M-FV-w1N" kind="custom" customClass="JHCustomSegue" id="kjH-pp-mKx"/>
+                                </connections>
+                            </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZrD-jK-r3u">
-                                <rect key="frame" x="0.0" y="64" width="320" height="446"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="392"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
                         </subviews>

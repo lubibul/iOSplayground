@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>4A7DEC21-CF58-4A23-8D5B-844AFDE5057F</string>
+	<string>51DBE27A-87F0-4F90-AE4E-E6E41355509D</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Playground</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -21,7 +21,7 @@
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/lubibul/iOSplayground.git</string>
+	<string>ssh://github.com/eecs482/dltang.0.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
